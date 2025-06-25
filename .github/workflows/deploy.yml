@@ -3,6 +3,8 @@ name: Deploy to Server
 on:
   push:
     branches: [ main, master ]
+  schedule:
+    - cron: '0 2 * * *'  # UTC 02:00 = 北京时间 10:00
   workflow_dispatch:
 
 jobs:
